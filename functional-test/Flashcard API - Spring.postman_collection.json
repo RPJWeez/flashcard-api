@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "14d49b3e-55da-4be9-8e45-acc606221f8f",
+		"name": "Flashcard API - Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deckName\": \"abc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/fc/decks",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"fc",
+						"decks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Deck by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/fc/decks/cd6daf22-ed3d-4115-bbd0-e1cf926f15bf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"fc",
+						"decks",
+						"cd6daf22-ed3d-4115-bbd0-e1cf926f15bf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST card to deck",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"frontContent\": \"Question 2222?\",\r\n    \"backContent\": \"Answer 2222!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/fc/decks/cd6daf22-ed3d-4115-bbd0-e1cf926f15bf/cards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"fc",
+						"decks",
+						"cd6daf22-ed3d-4115-bbd0-e1cf926f15bf",
+						"cards"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE card from deck",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/fc/decks/5a1548b6-1511-48e7-89dd-3b98235ac517/cards/5a034622-b353-40ea-9ed5-e1a4c6421727",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"fc",
+						"decks",
+						"5a1548b6-1511-48e7-89dd-3b98235ac517",
+						"cards",
+						"5a034622-b353-40ea-9ed5-e1a4c6421727"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Deck",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/fc/decks/c21e3736-56dc-4902-8f18-f933cfb6b688",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"fc",
+						"decks",
+						"c21e3736-56dc-4902-8f18-f933cfb6b688"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
